@@ -12,4 +12,9 @@ class Foo
 
         return true; // and another coding style issue
     }
+
+    public function baz()
+    {
+        echo 'adds baz';
+    }
 }
