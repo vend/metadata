@@ -29,7 +29,7 @@ class MetadataFactory implements AdvancedMetadataFactoryInterface
     private $loadedMetadata = array();
     private $loadedClassMetadata = array();
     private $hierarchyMetadataClass;
-    private $includeInterfaces = false;
+    private $includeInterfaces = FALSE;
     private $debug;
 
     /**
@@ -37,7 +37,7 @@ class MetadataFactory implements AdvancedMetadataFactoryInterface
      * @param string          $hierarchyMetadataClass
      * @param boolean         $debug
      */
-    public function __construct(DriverInterface $driver, $hierarchyMetadataClass = 'Metadata\ClassHierarchyMetadata', $debug = false)
+    public function __construct(DriverInterface $driver, $hierarchyMetadataClass = 'Metadata\ClassHierarchyMetadata', $debug = FALSE)
     {
         $this->driver = $driver;
         $this->hierarchyMetadataClass = $hierarchyMetadataClass;
@@ -169,9 +169,9 @@ class MetadataFactory implements AdvancedMetadataFactoryInterface
         do {
             $classes[] = $refl;
             $refl = $refl->getParentClass();
-        } while (false !== $refl);
+        } while (FALSE !== $refl);
 
-        $classes = array_reverse($classes, false);
+        $classes = array_reverse($classes, FALSE);
 
         if (!$this->includeInterfaces) {
             return $classes;
@@ -185,7 +185,7 @@ class MetadataFactory implements AdvancedMetadataFactoryInterface
                 if (isset($addedInterfaces[$interface->getName()])) {
                     continue;
                 }
-                $addedInterfaces[$interface->getName()] = true;
+                $addedInterfaces[$interface->getName()] = TRUE;
 
                 $newHierarchy[] = $interface;
             }

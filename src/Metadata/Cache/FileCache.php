@@ -41,7 +41,7 @@ class FileCache implements CacheInterface
         $path = $this->dir.'/'.strtr($metadata->name, '\\', '-').'.cache.php';
 
         $tmpFile = tempnam($this->dir, 'metadata-cache');
-        file_put_contents($tmpFile, '<?php return unserialize('.var_export(serialize($metadata), true).');');
+        file_put_contents($tmpFile, '<?php return unserialize('.var_export(serialize($metadata), TRUE).');');
         chmod($tmpFile, 0666 & ~umask());
 
         $this->renameFile($tmpFile, $path);
@@ -54,12 +54,12 @@ class FileCache implements CacheInterface
      * @param string $target
      */
     private function renameFile($source, $target) {
-        if (false === @rename($source, $target)) {
+        if (FALSE === @rename($source, $target)) {
             if (defined('PHP_WINDOWS_VERSION_BUILD')) {
-                if (false === copy($source, $target)) {
+                if (FALSE === copy($source, $target)) {
                     throw new \RuntimeException(sprintf('(WIN) Could not write new cache file to %s.', $target));
                 }
-                if (false === unlink($source)) {
+                if (FALSE === unlink($source)) {
                     throw new \RuntimeException(sprintf('(WIN) Could not delete temp cache file to %s.', $source));
                 }
             } else {

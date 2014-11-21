@@ -38,7 +38,7 @@ class PropertyMetadata implements \Serializable
         $this->name = $name;
 
         $this->reflection = new \ReflectionProperty($class, $name);
-        $this->reflection->setAccessible(true);
+        $this->reflection->setAccessible(TRUE);
     }
 
     /**
@@ -73,6 +73,6 @@ class PropertyMetadata implements \Serializable
         list($this->class, $this->name) = unserialize($str);
 
         $this->reflection = new \ReflectionProperty($this->class, $this->name);
-        $this->reflection->setAccessible(true);
+        $this->reflection->setAccessible(TRUE);
     }
 }
