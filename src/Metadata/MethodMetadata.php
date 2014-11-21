@@ -38,7 +38,7 @@ class MethodMetadata implements \Serializable
         $this->name = $name;
 
         $this->reflection = new \ReflectionMethod($class, $name);
-        $this->reflection->setAccessible(true);
+        $this->reflection->setAccessible(TRUE);
     }
 
     /**
@@ -62,6 +62,6 @@ class MethodMetadata implements \Serializable
         list($this->class, $this->name) = unserialize($str);
 
         $this->reflection = new \ReflectionMethod($this->class, $this->name);
-        $this->reflection->setAccessible(true);
+        $this->reflection->setAccessible(TRUE);
     }
 }

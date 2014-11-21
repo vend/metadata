@@ -61,15 +61,15 @@ class ClassMetadata implements \Serializable
 
         foreach ($this->fileResources as $filepath) {
             if (!file_exists($filepath)) {
-                return false;
+                return FALSE;
             }
 
             if ($timestamp < filemtime($filepath)) {
-                return false;
+                return FALSE;
             }
         }
 
-        return true;
+        return TRUE;
     }
 
     public function serialize()

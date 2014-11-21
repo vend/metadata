@@ -46,10 +46,10 @@ class ClassHierarchyMetadata
     {
         foreach ($this->classMetadata as $metadata) {
             if (!$metadata->isFresh($timestamp)) {
-                return false;
+                return FALSE;
             }
         }
 
-        return true;
+        return TRUE;
     }
 }

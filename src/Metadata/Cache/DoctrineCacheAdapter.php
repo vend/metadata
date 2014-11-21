@@ -36,7 +36,7 @@ class DoctrineCacheAdapter implements CacheInterface
     public function loadClassMetadataFromCache(\ReflectionClass $class)
     {
         $cache = $this->cache->fetch($this->prefix . $class->name);
-        return false === $cache ? null : $cache;
+        return FALSE === $cache ? null : $cache;
     }
 
     /**
