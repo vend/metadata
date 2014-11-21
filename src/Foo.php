@@ -16,5 +16,7 @@ class Foo
     public function baz()
     {
         echo 'adds baz';
+
+        return false;
     }
 }
