@@ -53,9 +53,9 @@ class ClassMetadata implements \Serializable
         $this->propertyMetadata[$metadata->name] = $metadata;
     }
 
-    public function isFresh($timestamp = null)
+    public function isFresh($timestamp = NULL)
     {
-        if (null === $timestamp) {
+        if (NULL === $timestamp) {
             $timestamp = $this->createdAt;
         }
 
