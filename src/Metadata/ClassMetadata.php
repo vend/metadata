@@ -53,6 +53,11 @@ class ClassMetadata implements \Serializable
         $this->propertyMetadata[$metadata->name] = $metadata;
     }
 
+    public function isThisATest()
+    {
+        return true;
+    }
+
     public function isFresh($timestamp = NULL)
     {
         if (NULL === $timestamp) {
