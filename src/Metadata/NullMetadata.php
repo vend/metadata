@@ -9,5 +9,7 @@ namespace Metadata;
  */
 class NullMetadata extends ClassMetadata
 {
-
+    public function HeyThereThisIsATestMethodThatWeAdd()
+    {
+    }
 }
