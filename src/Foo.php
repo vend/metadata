@@ -7,6 +7,7 @@ class Foo
     }
 
     public function baz() { }
+    public function abcdef() { }
 
     public function bar()
     {
