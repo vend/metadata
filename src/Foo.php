@@ -6,6 +6,8 @@ class Foo
         echo 'Foo';
     }
 
+    public function fufuheufeufejfie() { }
+
     public function baz() { }
     public function addsAnotherMethod() { }
 
