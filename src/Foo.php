@@ -17,6 +17,8 @@ class Foo
         return true; // and another coding style issue
     }
 
+    public function fijifijifjefhurfhurfurfh() { }
+
     public function fjkfjfkjfkjkjfd()
     {
     }
