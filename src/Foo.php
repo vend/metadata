@@ -7,7 +7,6 @@ class Foo
     }
 
     public function fufuheufeufejfie() { }
-    public function fidjfijdifjdifji() { }
 
     public function baz() { }
     public function addsAnotherMethod() { }
