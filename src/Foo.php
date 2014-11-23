@@ -6,8 +6,6 @@ class Foo
         echo 'Foo';
     }
 
-    public function baz() { }
-
     public function bar()
     {
         echo 'Adds another function';
