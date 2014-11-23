@@ -8,6 +8,7 @@ class Foo
 
     public function baz() { }
     public function abcdef() { }
+    public function fiffieieueuezehejfjfj($a, $b, $c) { }
 
     public function bar()
     {
