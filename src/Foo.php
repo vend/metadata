@@ -7,7 +7,7 @@ class Foo
     }
 
     public function baz() { }
-    public function abcdef() { }
+    public function addsAnotherMethod() { }
 
     public function bar()
     {
