@@ -79,8 +79,7 @@ class ClassMetadata implements \Serializable
 
     public function serialize()
     {
-        return serialize(array(
-            $this->name,
+        return serialize(array($this->name,
             $this->methodMetadata,
             $this->propertyMetadata,
             $this->fileResources,
@@ -90,13 +89,11 @@ class ClassMetadata implements \Serializable
 
     public function unserialize($str)
     {
-        list(
-            $this->name,
+        list($this->name,
             $this->methodMetadata,
             $this->propertyMetadata,
             $this->fileResources,
-            $this->createdAt
-        ) = unserialize($str);
+            $this->createdAt) = unserialize($str);
 
         $this->reflection = new \ReflectionClass($this->name);
     }
